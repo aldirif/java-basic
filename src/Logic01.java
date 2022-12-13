@@ -6,6 +6,10 @@ public class Logic01 {
         soal4(9);
         soal5(9);
         soal6(9);
+        soal8(9);
+        soal9(9);
+        soal10(9);
+
     }
 
     public static void soal1(int n) {
@@ -106,5 +110,40 @@ public class Logic01 {
 
             }
         }System.out.println("\n");
+    }
+
+    public static void soal8(int n) {
+        System.out.println("soal 8 :");
+        String[] deret = new String[n];
+        char huruf = 'A';
+        int angka = 2;
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                deret[i] = String.valueOf(huruf);
+            } else {
+                deret[i] = String.valueOf(angka);
+                angka += 2;
+            }
+            huruf++;
+        }
+        PrintArray.print(deret);
+    }
+
+    public static void soal9(int n){
+        System.out.println("soal 9 :");
+        int[] deret = new int[n];
+        for (int i = 0; i < n; i++) {
+            deret[i] = (int)Math.pow(3,i);
+        }
+        PrintArray.print(deret);
+    }
+
+    public static void soal10(int n){
+        System.out.println("soal 10 :");
+        int[] deret = new int[n];
+        for (int i = 0; i < n; i++) {
+            deret[i] = (int)Math.pow(i,3);
+        }
+        PrintArray.print(deret);
     }
 }
